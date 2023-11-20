@@ -6,7 +6,7 @@ public class Word
         Random random = new Random();
 
         int remainingWords = _spliced.Length;
-        if (remainingWords > 0)
+        if (remainingWords > 25)
         {
             int randomIndex = random.Next(0, _spliced.Length);
             _spliced[randomIndex] = new string('_', _spliced[randomIndex].Length);
@@ -15,7 +15,8 @@ public class Word
         }
         else
         {
-            return "All the words are gone.";
+            string end = "All the words are gone";
+            return end;
         }
     }
 }
